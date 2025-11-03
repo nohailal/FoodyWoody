@@ -5,10 +5,16 @@ import { StatsCard } from './StatsCard';
 import { MealForm } from './MealForm';
 import { MealsList } from './MealsList';
 
-export const Dashboard = ({ currentUser, stats, waterIntake, meals, mealForm, onLogout, onAddWater, onAddMeal }) => {
+export const Dashboard = ({ currentUser, stats, waterIntake, meals, mealForm, onLogout, onAddWater, onAddMeal, onOpenSettings, onOpenAnalytics, onOpenRecipes }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-pink-100">
-      <Navigation currentUser={currentUser} onLogout={onLogout} />
+      <Navigation 
+        currentUser={currentUser} 
+        onLogout={onLogout} 
+        onOpenSettings={onOpenSettings}
+        onOpenAnalytics={onOpenAnalytics}
+        onOpenRecipes={onOpenRecipes}
+      />
       
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="grid md:grid-cols-3 gap-6 mb-8">
